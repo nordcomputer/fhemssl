@@ -1,0 +1,41 @@
+	## VHost für eine Webseite unter meinedomain.myfritz.net im Verzeichnis /var/www/ ####
+  
+  <VirtualHost *:80>
+		ServerName meinedomain.myfritz.net
+		DocumentRoot /var/www
+		<Directory "/var/www/">
+			Options FollowSymLinks
+			AllowOverride All
+			Require all granted
+		</Directory>
+	</VirtualHost>
+
+
+
+## VHost für SSL Verbindung für meinedomain.myfritz.net im Verzeichnis /var/www/ ####
+
+<IfModule mod_ssl.c>
+	<VirtualHost *:443>
+	DocumentRoot /var/www
+	ServerName meinedomain.myfritz.net
+		SSLEngine on
+		SSLCertificateFile    /etc/letsencrypt/live/meinedomain.myfritz.net/cert.pem
+		SSLCertificateKeyFile /etc/letsencrypt/live/meinedomain.myfritz.net/privkey.pem
+		SSLCertificateChainFile /etc/letsencrypt/live/meinedomain.myfritz.net/chain.pem
+		<Directory /var/www/>
+		   AllowOverride All
+		   Require all granted
+		   Options FollowSymLinks
+		</Directory>
+	</VirtualHost>
+</IfModule>
+
+
+## Interne Weiterleitung per ProxyPass Weiterleitung von meinedomain.myfritz.net/fhem auf localhost:8083/fhem ##
+
+	<Location /fhem>
+	# ProxyPass/ProxyPassReverse leitet HTTP requests auf eine andere URL um
+	  ProxyPass http://localhost:8083/fhem  
+	  ProxyHTMLEnable On
+	  SetOutputFilter INFLATE;proxy-html;DEFLATE
+	</Location>
