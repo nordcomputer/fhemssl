@@ -15,7 +15,9 @@ sudo apt-get install libapache2-mod-proxy-html
 
 ## Aktivierung des Moduls/der Module:
 sudo a2enmod proxy
+
 sudo a2enmod proxy_html
+
 sudo a2enmod proxy_http
 
 ## Installation des VHosts:
