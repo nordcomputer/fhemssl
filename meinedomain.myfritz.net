@@ -1,4 +1,4 @@
-	## VHost für eine Webseite unter meinedomain.myfritz.net im Verzeichnis /var/www/ ####
+## VHost für eine Webseite unter meinedomain.myfritz.net im Verzeichnis /var/www/ ####
   
   <VirtualHost *:80>
 		ServerName meinedomain.myfritz.net
