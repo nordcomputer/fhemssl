@@ -1,11 +1,12 @@
 # fhemssl
 SSL Verbindung für FHEM mit letsencrypt bei schon vorhandener verschlüsselter Domain
+
 Es wird eine SSL-verschlüsselte Verbindung zu FHEM über die vorhandene Domain mit dem Zusatz "/fhem" hergestellt.
 
 
 ## Voraussetzung: 
 - Apache2 Webserver
-- vorhandenes SSL Zertifikat für Domain (im Code als Beispiel: meinedomain.myfritz.net 
+- vorhandenes SSL Zertifikat für Domain (im Code als Beispiel: meinedomain.myfritz.net) 
 - Installiertes Modul mod-proxy-html für Apache
 
 # Installationsanweisungen: 
