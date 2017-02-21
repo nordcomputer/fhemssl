@@ -1,5 +1,6 @@
 # fhemssl
-SSL Verbindung mit letsencrypt oder anderem Anbieter für FHEM
+SSL Verbindung für FHEM mit letsencrypt bei schon vorhandener verschlüsselter Domain
+Es wird eine SSL-verschlüsselte Verbindung zu FHEM über die vorhandene Domain mit dem Zusatz "/fhem" hergestellt.
 
 
 ## Voraussetzung: 
