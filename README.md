@@ -21,7 +21,7 @@ sudo a2enmod proxy_html
 sudo a2enmod proxy_http
 
 ## Installation des VHosts:
-Die Datei meineDomain.myfritz.net ist lediglich eine Beispieldatei!
+Die Datei meinedomain.myfritz.net ist lediglich eine Beispieldatei!
 Unter Apache liegen die VHosts Dateien üblicherweise unter /etc/Apache2/sites-available/
 
 # fhemssl herunterladen: 
