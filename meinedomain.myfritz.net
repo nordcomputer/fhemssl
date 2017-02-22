@@ -35,7 +35,7 @@
 
 	<Location /fhem>
 	# ProxyPass/ProxyPassReverse leitet HTTP requests auf eine andere URL um
-	  ProxyPass http://localhost:8083/fhem  
+	  ProxyPass http://localhost:8083/fhem
+	  ProxyPassReverse http://localhost:8083/fhem
 	  ProxyHTMLEnable On
-	  SetOutputFilter INFLATE;proxy-html;DEFLATE
 	</Location>
